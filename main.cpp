@@ -17,202 +17,1327 @@ vector<int> generate_m_sequence(int baseVal, int powerVal, int shift=1, int whic
         switch(powerVal)
         {
             case 2:
-                taps.push_back({1, 2});
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
                 break;
             case 3:
-                taps.push_back({1, 3});
-                taps.push_back({2, 3});
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
                 break;
             case 4:
-                taps.push_back({1,4});
-                taps.push_back({3,4});
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
                 break;
             case 5:
-                taps.push_back({2,5});
-                taps.push_back({3,5});
-                taps.push_back({1,2,3,5});
-                taps.push_back({2,3,4,5});
-                taps.push_back({1,2,4,5});
-                taps.push_back({1,3,4,5});
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
                 break;
             case 6:
-                taps.push_back({1,6});
-                taps.push_back({5,6});
-                taps.push_back({1,2,5,6});
-                taps.push_back({1,4,5,6});
-                taps.push_back({1,3,4,6});
-                taps.push_back({2,3,5,6});
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(6);
+                taps.push_back(vector<int>());
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+
                 break;
             case 7:
-                taps.push_back({1,7});
-                taps.push_back({6,7});
-                taps.push_back({3,7});
-                taps.push_back({4,7});
-                taps.push_back({1,2,3,7});
-                taps.push_back({4,5,6,7});
-                taps.push_back({1,2,5,7});
-                taps.push_back({2,5,6,7});
-                taps.push_back({2,3,4,7});
-                taps.push_back({3,4,5,7});
-                taps.push_back({1,3,5,7});
-                taps.push_back({2,4,6,7});
-                taps.push_back({1,3,6,7});
-                taps.push_back({1,4,6,7});
-                taps.push_back({2,3,4,5,6,7});
-                taps.push_back({1,2,3,4,5,7});
-                taps.push_back({1,2,4,5,6,7});
-                taps.push_back({1,2,3,5,6,7});
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+
                 break;
             case 8:
-                taps.push_back({1,2,7,8});
-                taps.push_back({1,6,7,8});
-                taps.push_back({1,3,5,8});
-                taps.push_back({3,5,7,8});
-                taps.push_back({2,3,4,8});
-                taps.push_back({4,5,6,8});
-                taps.push_back({2,3,5,8});
-                taps.push_back({3,5,6,8});
-                taps.push_back({2,3,6,8});
-                taps.push_back({2,5,6,8});
-                taps.push_back({2,3,7,8});
-                taps.push_back({1,5,6,8});
-                taps.push_back({1,2,3,4,6,8});
-                taps.push_back({2,4,5,6,7,8});
-                taps.push_back({1,2,3,6,7,8});
-                taps.push_back({1,2,5,6,7,8});
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+
                 break;
             case 9:
-                taps.push_back({4,9});
-                taps.push_back({5,9});
-                taps.push_back({3,4,6,9});
-                taps.push_back({3,5,6,9});
-                taps.push_back({4,5,8,9});
-                taps.push_back({1,4,5,9});
-                taps.push_back({1,4,8,9});
-                taps.push_back({1,5,8,9});
-                taps.push_back({2,3,5,9});
-                taps.push_back({4,6,7,9});
-                taps.push_back({5,6,8,9});
-                taps.push_back({1,3,4,9});
-                taps.push_back({2,7,8,9});
-                taps.push_back({1,2,7,9});
-                taps.push_back({2,4,7,9});
-                taps.push_back({2,5,7,9});
-                taps.push_back({2,4,8,9});
-                taps.push_back({1,5,7,9});
-                taps.push_back({1,2,4,5,6,9});
-                taps.push_back({3,4,5,7,8,9});
-                taps.push_back({1,3,4,6,7,9});
-                taps.push_back({2,3,5,6,8,9});
-                taps.push_back({3,5,6,7,8,9});
-                taps.push_back({1,2,3,4,6,9});
-                taps.push_back({1,5,6,7,8,9});
-                taps.push_back({1,2,3,4,8,9});
-                taps.push_back({1,2,3,7,8,9});
-                taps.push_back({1,2,6,7,8,9});
-                taps.push_back({1,3,5,6,8,9});
-                taps.push_back({1,3,4,6,8,9});
-                taps.push_back({1,2,3,5,6,9});
-                taps.push_back({3,4,6,7,8,9});
-                taps.push_back({2,3,6,7,8,9});
-                taps.push_back({1,2,3,6,7,9});
-                taps.push_back({1,4,5,6,8,9});
-                taps.push_back({1,3,4,5,8,9});
-                taps.push_back({1,3,6,7,8,9});
-                taps.push_back({1,2,3,6,8,9});
-                taps.push_back({2,3,4,5,6,9});
-                taps.push_back({3,4,5,6,7,9});
-                taps.push_back({2,4,6,7,8,9});
-                taps.push_back({1,2,3,5,7,9});
-                taps.push_back({2,3,4,5,7,9});
-                taps.push_back({2,4,5,6,7,9});
-                taps.push_back({1,2,4,5,7,9});
-                taps.push_back({2,4,5,6,7,9});
-                taps.push_back({1,3,4,5,6,7,8,9});
-                taps.push_back({1,2,3,4,5,6,8,9});
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(5);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+
                 break;
             case 10:
-                taps.push_back({3,10});
-                taps.push_back({7,10});
-                taps.push_back({2,3,8,10});
-                taps.push_back({2,7,8,10});
-                taps.push_back({1,3,4,10});
-                taps.push_back({6,7,9,10});
-                taps.push_back({1,5,8,10});
-                taps.push_back({2,5,9,10});
-                taps.push_back({4,5,8,10});
-                taps.push_back({2,5,6,10});
-                taps.push_back({1,4,9,10});
-                taps.push_back({1,6,9,10});
-                taps.push_back({3,4,8,10});
-                taps.push_back({2,6,7,10});
-                taps.push_back({2,3,5,10});
-                taps.push_back({5,7,8,10});
-                taps.push_back({1,2,5,10});
-                taps.push_back({5,8,9,10});
-                taps.push_back({2,4,9,10});
-                taps.push_back({1,6,8,10});
-                taps.push_back({3,7,9,10});
-                taps.push_back({1,3,7,10});
-                taps.push_back({1,2,3,5,6,10});
-                taps.push_back({4,5,7,8,9,10});
-                taps.push_back({2,3,6,8,9,10});
-                taps.push_back({1,2,4,7,8,10});
-                taps.push_back({1,5,6,8,9,10});
-                taps.push_back({1,2,4,5,9,10});
-                taps.push_back({2,5,6,7,8,10});
-                taps.push_back({2,3,4,5,8,10});
-                taps.push_back({2,4,6,8,9,10});
-                taps.push_back({1,2,4,6,8,10});
-                taps.push_back({1,2,3,7,8,10});
-                taps.push_back({2,3,7,8,9,10});
-                taps.push_back({3,4,5,8,9,10});
-                taps.push_back({1,2,5,6,7,10});
-                taps.push_back({1,4,6,7,9,10});
-                taps.push_back({1,3,4,6,9,10});
-                taps.push_back({1,2,6,8,9,10});
-                taps.push_back({1,2,4,8,9,10});
-                taps.push_back({1,4,7,8,9,10});
-                taps.push_back({1,2,3,6,9,10});
-                taps.push_back({1,2,6,7,8,10});
-                taps.push_back({2,3,4,8,9,10});
-                taps.push_back({1,2,4,6,7,10});
-                taps.push_back({3,4,6,8,9,10});
-                taps.push_back({2,4,5,7,9,10});
-                taps.push_back({1,3,5,6,8,10});
-                taps.push_back({3,4,5,6,9,10});
-                taps.push_back({1,4,5,6,7,10});
-                taps.push_back({1,3,4,5,6,7,8,10});
-                taps.push_back({2,3,4,5,6,7,9,10});
-                taps.push_back({3,4,5,6,7,8,9,10});
-                taps.push_back({1,2,3,4,5,6,7,10});
-                taps.push_back({1,2,3,4,5,6,9,10});
-                taps.push_back({1,4,5,6,7,8,9,10});
-                taps.push_back({2,3,4,5,6,8,9,10});
-                taps.push_back({1,2,4,5,6,7,8,10});
-                taps.push_back({1,2,3,4,6,7,9,10});
-                taps.push_back({1,3,4,6,7,8,9,10});
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(10);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(7);
+                taps.back().push_back(10);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(7);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(5);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(6);
+                taps.back().push_back(7);
+                taps.back().push_back(8);
+                taps.back().push_back(9);
+                taps.back().push_back(10);
                 break;
-            case 11: taps.push_back({9,11});break;
-            case 12: taps.push_back({6,8,11,12});break;
-            case 13: taps.push_back({9,10,12,13});break;
-            case 14: taps.push_back({4,8,13,14});break;
-            case 15: taps.push_back({14,15});break;
-            case 16: taps.push_back({4,13,15,16});break;
-            case 17: taps.push_back({14,17});break;
-            case 18: taps.push_back({11,18});break;
-            case 19: taps.push_back({14,17,18,19});break;
-            case 20: taps.push_back({17,20});break;
-            case 21: taps.push_back({19,21});break;
-            case 22: taps.push_back({21,22});break;
-            case 23: taps.push_back({18,23});break;
-            case 24: taps.push_back({17,22,23,24});break;
-            case 25: taps.push_back({22,25});break;
-            case 26: taps.push_back({20,24,25,26});break;
-            case 27: taps.push_back({22,25,26,27});break;
-            case 28: taps.push_back({25,28});break;
-            case 29: taps.push_back({27,29});break;
-            case 30: taps.push_back({7,28,29,30});break;
+
+            case 11:
+                taps.push_back(vector<int>());
+                taps.back().push_back(9);
+                taps.back().push_back(11);
+                break;
+
+            case 12:
+                taps.push_back(vector<int>());
+                taps.back().push_back(6);
+                taps.back().push_back(8);
+                taps.back().push_back(11);
+                taps.back().push_back(12);
+                break;
+
+            case 13:
+                taps.push_back(vector<int>());
+                taps.back().push_back(9);
+                taps.back().push_back(10);
+                taps.back().push_back(12);
+                taps.back().push_back(13);
+                break;
+
+            case 14:
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(8);
+                taps.back().push_back(13);
+                taps.back().push_back(14);
+                break;
+
+            case 15:
+                taps.push_back(vector<int>());
+                taps.back().push_back(14);
+                taps.back().push_back(15);
+                break;
+            case 16:
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(13);
+                taps.back().push_back(15);
+                taps.back().push_back(16);
+                break;
+
+            case 17:
+                taps.push_back(vector<int>());
+                taps.back().push_back(14);
+                taps.back().push_back(17);
+                break;
+
+            case 18:
+                taps.push_back(vector<int>());
+                taps.back().push_back(11);
+                taps.back().push_back(18);
+                break;
+
+            case 19:
+                taps.push_back(vector<int>());
+                taps.back().push_back(14);
+                taps.back().push_back(17);
+                taps.back().push_back(18);
+                taps.back().push_back(19);
+                break;
+
+            case 20:
+                taps.push_back(vector<int>());
+                taps.back().push_back(17);
+                taps.back().push_back(20);
+                break;
+
+            case 21:
+                taps.push_back(vector<int>());
+                taps.back().push_back(19);
+                taps.back().push_back(21);
+                break;
+
+            case 22:
+                taps.push_back(vector<int>());
+                taps.back().push_back(21);
+                taps.back().push_back(22);
+                break;
+
+            case 23:
+                taps.push_back(vector<int>());
+                taps.back().push_back(18);
+                taps.back().push_back(23);
+                break;
+
+            case 24:
+                taps.push_back(vector<int>());
+                taps.back().push_back(17);
+                taps.back().push_back(22);
+                taps.back().push_back(23);
+                taps.back().push_back(24);
+                break;
+
+            case 25:
+                taps.push_back(vector<int>());
+                taps.back().push_back(22);
+                taps.back().push_back(25);
+                break;
+
+            case 26:
+                taps.push_back(vector<int>());
+                taps.back().push_back(20);
+                taps.back().push_back(24);
+                taps.back().push_back(25);
+                taps.back().push_back(26);
+                break;
+
+            case 27:
+                taps.push_back(vector<int>());
+                taps.back().push_back(22);
+                taps.back().push_back(25);
+                taps.back().push_back(26);
+                taps.back().push_back(27);
+                break;
+
+            case 28:
+                taps.push_back(vector<int>());
+                taps.back().push_back(25);
+                taps.back().push_back(28);
+                break;
+
+            case 29:
+                taps.push_back(vector<int>());
+                taps.back().push_back(27);
+                taps.back().push_back(29);
+                break;
+
+            case 30:
+                taps.push_back(vector<int>());
+                taps.back().push_back(7);
+                taps.back().push_back(28);
+                taps.back().push_back(29);
+                taps.back().push_back(39);
+                break;
             default:
                 cout << "M-sequence " << baseVal << "^" << powerVal << " is not defined" << endl;
 
@@ -221,102 +1346,677 @@ vector<int> generate_m_sequence(int baseVal, int powerVal, int shift=1, int whic
     } else if (baseVal == 3) {
         switch (powerVal) {
             case 2:
-                taps.push_back({2,1});
-                taps.push_back({1,1});
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
                 break;
             case 3:
-                taps.push_back({0,1,2});
-                taps.push_back({1,0,2});
-                taps.push_back({1,2,2});
-                taps.push_back({2,1,2});
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
                 break;
             case 4:
-                taps.push_back({0,0,2,1});
-                taps.push_back({0,0,1,1});
-                taps.push_back({2,0,0,1});
-                taps.push_back({2,2,1,1});
-                taps.push_back({2,1,1,1});
-                taps.push_back({1,0,0,1});
-                taps.push_back({1,2,2,1});
-                taps.push_back({1,1,2,1});
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
                 break;
             case 5:
-                taps.push_back({0,0,0,1,2});
-                taps.push_back({0,0,0,1,2});
-                taps.push_back({0,0,1,2,2});
-                taps.push_back({0,2,1,0,2});
-                taps.push_back({0,2,1,1,2});
-                taps.push_back({0,1,2,0,2});
-                taps.push_back({0,1,1,2,2});
-                taps.push_back({2,0,0,1,2});
-                taps.push_back({2,0,2,0,2});
-                taps.push_back({2,0,2,2,2});
-                taps.push_back({2,2,0,2,2});
-                taps.push_back({2,2,2,1,2});
-                taps.push_back({2,2,1,2,2});
-                taps.push_back({2,1,2,2,2});
-                taps.push_back({2,1,1,0,2});
-                taps.push_back({1,0,0,0,2});
-                taps.push_back({1,0,0,2,2});
-                taps.push_back({1,0,1,1,2});
-                taps.push_back({1,2,2,2,2});
-                taps.push_back({1,1,0,1,2});
-                taps.push_back({1,1,2,0,2});
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
                 break;
             case 6:
-                taps.push_back({0,0,0,0,2,1});
-                taps.push_back({0,0,0,0,1,1});
-                taps.push_back({0,0,2,0,2,1});
-                taps.push_back({0,0,1,0,1,1});
-                taps.push_back({0,2,0,1,2,1});
-                taps.push_back({0,2,0,1,1,1});
-                taps.push_back({0,2,2,0,1,1});
-                taps.push_back({0,2,2,2,1,1});
-                taps.push_back({2,1,1,1,0,1});
-                taps.push_back({1,0,0,0,0,1});
-                taps.push_back({1,0,2,1,0,1});
-                taps.push_back({1,0,1,0,0,1});
-                taps.push_back({1,0,1,2,1,1});
-                taps.push_back({1,0,1,1,1,1});
-                taps.push_back({1,2,0,2,2,1});
-                taps.push_back({1,2,0,1,0,1});
-                taps.push_back({1,2,2,1,2,1});
-                taps.push_back({1,2,1,0,1,1});
-                taps.push_back({1,2,1,2,1,1});
-                taps.push_back({1,2,1,1,2,1});
-                taps.push_back({1,1,2,1,0,1});
-                taps.push_back({1,1,1,0,1,1});
-                taps.push_back({1,1,1,2,0,1});
-                taps.push_back({1,1,1,1,1,1});
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+
                 break;
             case 7:
-                taps.push_back({0,0,0,0,2,1,2});
-                taps.push_back({0,0,0,0,1,0,2});
-                taps.push_back({0,0,0,2,0,2,2});
-                taps.push_back({0,0,0,2,2,2,2});
-                taps.push_back({0,0,0,2,1,0,2});
-                taps.push_back({0,0,0,1,1,2,2});
-                taps.push_back({0,0,0,1,1,1,2});
-                taps.push_back({0,0,2,2,2,0,2});
-                taps.push_back({0,0,2,2,1,2,2});
-                taps.push_back({0,0,2,1,0,0,2});
-                taps.push_back({0,0,2,1,2,2,2});
-                taps.push_back({0,0,1,0,2,1,2});
-                taps.push_back({0,0,1,0,1,1,2});
-                taps.push_back({0,0,1,1,0,1,2});
-                taps.push_back({0,0,1,1,2,0,2});
-                taps.push_back({0,2,0,0,0,2,2});
-                taps.push_back({0,2,0,0,1,0,2});
-                taps.push_back({0,2,0,0,1,1,2});
-                taps.push_back({0,2,0,2,2,0,2});
-                taps.push_back({0,2,0,2,1,2,2});
-                taps.push_back({0,2,0,1,1,0,2});
-                taps.push_back({0,2,2,0,2,0,2});
-                taps.push_back({0,2,2,0,1,2,2});
-                taps.push_back({0,2,2,2,2,1,2});
-                taps.push_back({0,2,2,2,1,0,2});
-                taps.push_back({0,2,2,1,0,1,2});
-                taps.push_back({0,2,2,1,2,2,2});
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
                 break;
             default:
                 cout << "M-sequence " << baseVal << "^" << powerVal << " is not defined" << endl;
@@ -325,77 +2025,437 @@ vector<int> generate_m_sequence(int baseVal, int powerVal, int shift=1, int whic
     } else if (baseVal == 5) {
         switch (powerVal) {
             case 2:
-                taps.push_back({4,3});
-                taps.push_back({3,2});
-                taps.push_back({2,2});
-                taps.push_back({1,3});
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+
                 break;
             case 3:
-                taps.push_back({0,2,3});
-                taps.push_back({4,1,2});
-                taps.push_back({3,0,2});
-                taps.push_back({3,4,2});
-                taps.push_back({3,3,3});
-                taps.push_back({3,3,2});
-                taps.push_back({3,1,3});
-                taps.push_back({2,0,3});
-                taps.push_back({2,4,3});
-                taps.push_back({2,3,3});
-                taps.push_back({2,3,2});
-                taps.push_back({2,1,2});
-                taps.push_back({1,0,2});
-                taps.push_back({1,4,3});
-                taps.push_back({1,1,3});
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+
                 break;
             case 4:
-                taps.push_back({0,4,3,3});
-                taps.push_back({0,4,3,2});
-                taps.push_back({0,4,2,3});
-                taps.push_back({0,4,2,2});
-                taps.push_back({0,1,4,3});
-                taps.push_back({0,1,4,2});
-                taps.push_back({0,1,1,3});
-                taps.push_back({0,1,1,2});
-                taps.push_back({4,0,4,2});
-                taps.push_back({4,0,3,2});
-                taps.push_back({4,0,2,3});
-                taps.push_back({4,0,1,3});
-                taps.push_back({4,4,4,2});
-                taps.push_back({4,3,0,3});
-                taps.push_back({4,3,4,3});
-                taps.push_back({4,2,0,2});
-                taps.push_back({4,2,1,3});
-                taps.push_back({4,1,1,2});
-                taps.push_back({3,0,4,2});
-                taps.push_back({3,0,3,3});
-                taps.push_back({3,0,2,2});
-                taps.push_back({3,0,1,3});
-                taps.push_back({3,4,3,2});
-                taps.push_back({3,3,0,2});
-                taps.push_back({3,3,3,3});
-                taps.push_back({3,2,0,3});
-                taps.push_back({3,2,2,3});
-                taps.push_back({3,1,2,2});
-                taps.push_back({2,0,4,3});
-                taps.push_back({2,0,3,2});
-                taps.push_back({2,0,2,3});
-                taps.push_back({2,0,1,2});
-                taps.push_back({2,4,2,2});
-                taps.push_back({2,3,0,2});
-                taps.push_back({2,3,2,3});
-                taps.push_back({2,2,0,3});
-                taps.push_back({2,2,3,3});
-                taps.push_back({2,1,3,2});
-                taps.push_back({1,0,4,3});
-                taps.push_back({1,0,3,3});
-                taps.push_back({1,0,2,2});
-                taps.push_back({1,0,1,2});
-                taps.push_back({1,4,1,2});
-                taps.push_back({1,3,0,3});
-                taps.push_back({1,3,1,3});
-                taps.push_back({1,2,0,2});
-                taps.push_back({1,2,4,3});
-                taps.push_back({1,1,4,2});
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(0);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(4);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(4);
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(3);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(2);
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(0);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(0);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+                taps.back().push_back(1);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(0);
+                taps.back().push_back(2);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(2);
+                taps.back().push_back(4);
+                taps.back().push_back(3);
+
+
+                taps.push_back(vector<int>());
+                taps.back().push_back(1);
+                taps.back().push_back(1);
+                taps.back().push_back(4);
+                taps.back().push_back(2);
+
+
                 break;
             default:
                 cout << "M-sequence " << baseVal << "^" << powerVal << " is not defined" << endl;
