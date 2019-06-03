@@ -2510,7 +2510,8 @@ vector<int> generate_m_sequence(int baseVal, int powerVal, int shift=1, int whic
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
-    vector<int> res = generate_m_sequence(2, 12, 0, 0);
+    int power = round(log2(63+1));
+    vector<int> res = generate_m_sequence(2, power, 0, 0);
     vector<int> res2(res.end() - 10, res.end());
 
     return 0;
